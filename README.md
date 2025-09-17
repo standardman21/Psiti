@@ -2120,9 +2120,9 @@ graph TD
     ethics_engine --> knowledge_base
     ethics_engine --> EDM
     knowledge_base --> adatbázis
-    knowledge_base --> ELK[ELK]
-    benchmarking --> Prometheus[Prometheus]
-    benchmarking --> Locust[Locust]
+    knowledge_base --> ELK
+    benchmarking --> Prometheus
+    benchmarking --> Locust
     DCM --> adatbázis
     DCM --> SEC
     AIM --> LLM
@@ -2133,18 +2133,18 @@ graph TD
     MON --> Alerting
     ORC --> Vezérlő
     ORC --> workflow_schemas
-    adatbázis --> PostgreSQL[PostgreSQL]
-    adatbázis --> Flyway[Flyway]
-    error_tracking --> Sentry[Sentry]
+    adatbázis --> PostgreSQL
+    adatbázis --> Flyway
+    error_tracking --> Sentry
     error_tracking --> ELK
     naplózó --> ELK
     naplózó --> LPM
     prometheus_integration --> Prometheus
-    prometheus_integration --> Grafana[Grafana]
-    deployment --> Kubernetes[Kubernetes]
-    deployment --> Istio[Istio]
-    version_control --> Git[Git]
-    version_control --> GitLab[GitLab]
+    prometheus_integration --> Grafana
+    deployment --> Kubernetes
+    deployment --> Istio
+    version_control --> Git
+    version_control --> GitLab
     LoadBalancer --> Istio
     LoadBalancer --> Kubernetes
     Failover --> Kubernetes
@@ -2158,7 +2158,7 @@ graph TD
     internal_data_adapter --> DCM
     internal_data_adapter --> adatbázis
     external_api_adapter --> SEC
-    external_api_adapter --> Kong[Kong]
+    external_api_adapter --> Kong
     SEC --> AUD
     SEC --> ELK
     AUD --> ELK
@@ -2190,7 +2190,7 @@ graph TD
     workflow_schemas --> ORC
     workflow_schemas --> WBM
     SEM --> Prometheus
-    SEM --> CloudCarbon[CloudCarbon]
+    SEM --> CloudCarbon
     CEM --> CTM
     CEM --> POL
     FVH --> UIM
@@ -2210,7 +2210,7 @@ graph TD
     SET --> TST
     SET --> MON
     VPM2 --> version_control
-    VPM2 --> VPM[VPM]
+    VPM2 --> VPM
     JMA --> ORC
     JMA --> MTM
     JFA --> error_tracking
@@ -2235,11 +2235,12 @@ graph TD
     ComplianceMonitor -->|Megfelelőségi ellenőrzés| TVG
 
     %% Styling
-    classDef module fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef dependency fill:#bbf,stroke:#333,stroke-width:2px;
-    class EDM,TVG,ComplianceMonitor module fill:#ff9,stroke:#333,stroke-width:3px;
-    class MTM,AUI,Vezérlő,STM,VAM,MEM,AMM,KBM,PDM,UIM,SAM,EAM,ERM,WBM,CSM,CTM,ethics_engine,knowledge_base,benchmarking,DCM,AIM,LPM,MON,ORC,adatbázis,error_tracking,naplózó,prometheus_integration,deployment,version_control,LoadBalancer,Failover,FinalIntegration,ADM,VIS,internal_data_adapter,external_api_adapter,SEC,AUD,HIB,LLM,TST,POL,LEG,SOC,RDM,EVM,IMP,DependencyMapping,WeightTable,ConvergenceMatrix,dependency_map,workflow_schemas,SEM,CEM,FVH,INT,IEK,ELM,ETM,DFM,FEM,SET,VPM2,JMA,JFA,FPA,FOA,KTA,SystemHealth,Alerting,PerformanceTuning,AuditTrail module;
-    class ELK,Prometheus,Grafana,PostgreSQL,Flyway,Sentry,Kubernetes,Istio,Git,GitLab,Kong,CloudCarbon,Locust,VPM dependency;
+    classDef module fill:#f9f,stroke:#333,stroke-width:2px
+    classDef dependency fill:#bbf,stroke:#333,stroke-width:2px
+    classDef highlight fill:#ff9,stroke:#333,stroke-width:3px
+    class EDM,TVG,ComplianceMonitor highlight
+    class MTM,AUI,Vezérlő,STM,VAM,MEM,AMM,KBM,PDM,UIM,SAM,EAM,ERM,WBM,CSM,CTM,ethics_engine,knowledge_base,benchmarking,DCM,AIM,LPM,MON,ORC,adatbázis,error_tracking,naplózó,prometheus_integration,deployment,version_control,LoadBalancer,Failover,FinalIntegration,ADM,VIS,internal_data_adapter,external_api_adapter,SEC,AUD,HIB,LLM,TST,POL,LEG,SOC,RDM,EVM,IMP,DependencyMapping,WeightTable,ConvergenceMatrix,dependency_map,workflow_schemas,SEM,CEM,FVH,INT,IEK,ELM,ETM,DFM,FEM,SET,VPM2,JMA,JFA,FPA,FOA,KTA,SystemHealth,Alerting,PerformanceTuning,AuditTrail module
+    class ELK,Prometheus,Grafana,PostgreSQL,Flyway,Sentry,Kubernetes,Istio,Git,GitLab,Kong,CloudCarbon,Locust,VPM dependency
 ```
 
 ## Adatfolyamat Leírása
