@@ -1,5 +1,3 @@
-Köszönöm a részletes visszajelzést és a pontos iránymutatást! Az általad megadott szempontok és prioritások alapján világos, hogy az MVP célja egy **bemutatható proof-of-concept**, amely az Evolve_Protokoll v2.6 három alapfunkcióját demonstrálja (adatfogadás/tárolás, etikai/anonimizálási ellenőrzés, validált kimenet), de nem éles rendszer. A meglévő MVP (1-6 iteráció) már lefedi ezt, és a 7-12 iterációk továbbfejlesztették (security, ML bias, NER, Prometheus, MTM), de most az 1-20 iterációs roadmapot véglegesítem, figyelembe véve a javasolt célokat, prioritásokat, és a fejlesztői szerepköröket (Python, Java, adatelemző, DB).
-
 Az alábbiakban a **teljes 1-20 iterációs MVP roadmapot** adom meg, amely:
 - **Fenntartja a modularitást** és a bemutathatóságot (Docker, curl tesztek, JSON output).
 - **Kezeli a korlátokat** (egyszerű etika, statikus CO2/CI, regex PII, hiányzó security).
@@ -305,5 +303,6 @@ Minden iteráció **1-2 nap** (4-6 óra/nap, 1-2 fejlesztő), összesen ~3-4 hé
 - **Szerepkörök**: Python Dev 1-3 (API, etika, tesztek), Java Dev 1-3 (API, Kafka, kliens), Adatelemző (bias, vizualizáció), DB kolléga (séma, migráció).
 - **Korlátok Fixálva**: Security (OAuth2), etika (ML), PII (NER), CO2/CI (dinamikus), monitoring (Prometheus).
 - **Bemutathatóság**: 5+ curl szcenárió, JSON output, coverage >90%, CI zöld.
+
 
 **Következő Lépés**: Az 1-6 iteráció kódja kész (korábbi válasz), 7-20 vázlatok. Ha konkrét iteráció kódját kéred (pl. Iter 7 OAuth2), vagy Java modult, írom! 😊
